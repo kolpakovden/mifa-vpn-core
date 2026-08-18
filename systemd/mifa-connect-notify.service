@@ -1,0 +1,9 @@
+[Unit]
+Description=MIFA new VPN source-IP notifier
+After=xray.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/mifa/notify.env
+ExecStart=/usr/local/bin/mifa-check-users
