@@ -1,0 +1,16 @@
+[Unit]
+Description=MIFA Xray Telegram Admin Bot
+After=network-online.target xray.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mifa/bot
+EnvironmentFile=/etc/mifa/state.env
+EnvironmentFile=/etc/mifa/bot.env
+ExecStart=/opt/mifa/bot/venv/bin/python /opt/mifa/bot/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
