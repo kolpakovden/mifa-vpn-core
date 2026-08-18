@@ -1,0 +1,8 @@
+[Unit]
+Description=MIFA Safe Xray Restart
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart xray
