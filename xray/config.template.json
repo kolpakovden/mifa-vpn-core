@@ -1,0 +1,83 @@
+{
+  "dns": {
+    "servers": [
+      "https+local://1.1.1.1/dns-query",
+      "https+local://8.8.8.8/dns-query",
+      "8.8.4.4"
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "log": {
+    "loglevel": "info",
+    "access": "/var/log/xray/access.log",
+    "dnsLog": false
+  },
+  "routing": {
+    "rules": [
+      {"type": "field", "domain": ["geosite:win-spy"], "outboundTag": "block"},
+      {"type": "field", "ip": ["geoip:private"], "outboundTag": "block"}
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "Vless8443",
+      "listen": "0.0.0.0",
+      "port": 8443,
+      "protocol": "vless",
+      "settings": {"clients": [], "decryption": "none"},
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "target": "__REALITY_TARGET__",
+          "xver": 0,
+          "spiderX": "/",
+          "serverNames": __SNI_POOL_JSON__,
+          "privateKey": "__REALITY_PRIVATE_KEY__",
+          "shortIds": ["__REALITY_SHORT_ID__"]
+        }
+      },
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "quic"]}
+    },
+    {
+      "tag": "Vless50273",
+      "listen": "0.0.0.0",
+      "port": 50273,
+      "protocol": "vless",
+      "settings": {"clients": [], "decryption": "none"},
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "target": "__REALITY_TARGET__",
+          "xver": 0,
+          "spiderX": "/",
+          "serverNames": __SNI_POOL_JSON__,
+          "privateKey": "__REALITY_PRIVATE_KEY__",
+          "shortIds": ["__REALITY_SHORT_ID__"]
+        }
+      },
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "quic"]}
+    },
+    {
+      "tag": "VlessXHTTP443",
+      "listen": "/dev/shm/mifa-xhttp.socket,0666",
+      "protocol": "vless",
+      "settings": {"clients": [], "decryption": "none"},
+      "streamSettings": {"network": "xhttp", "xhttpSettings": {"path": "/__XHTTP_PATH__/", "mode": "stream-one"}}
+    },
+    {
+      "tag": "VlessWS443",
+      "listen": "/dev/shm/mifa-ws.socket,0666",
+      "protocol": "vless",
+      "settings": {"clients": [], "decryption": "none"},
+      "streamSettings": {"network": "websocket", "wsSettings": {"path": "/__WS_PATH__/", "acceptProxyProtocol": false}}
+    }
+  ],
+  "outbounds": [
+    {"protocol": "freedom", "tag": "direct", "settings": {"domainStrategy": "ForceIPv4"}},
+    {"protocol": "blackhole", "tag": "block"}
+  ]
+}
