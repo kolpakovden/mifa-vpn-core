@@ -133,3 +133,9 @@ The repository contains templates only.
 ## Legacy project
 
 The original MIFA VPN Platform is considered feature-complete and archived. MIFA VPN Core is the maintained simplified architecture.
+
+## License
+
+This repository's original code, configuration templates and documentation are licensed under the [MIT License](LICENSE). Keep the copyright and permission notice when redistributing copies or substantial portions.
+
+Third-party software and any third-party materials retain their own licenses and copyright notices. This license does not relicense Xray, Grafana, Loki or other dependencies.
