@@ -1,21 +1,72 @@
-MIT License
+MIFA Free Noncommercial License, Version 1.0
+Effective date: 2026-10-24
+SPDX-License-Identifier: LicenseRef-MIFA-Free-Noncommercial-1.0
 
 Copyright (c) 2026 Denis Kolpakov
+Project: https://github.com/kolpakovden/mifa-vpn-core
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Scope and permission
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Subject to these terms, the copyright holder grants everyone a worldwide,
+royalty-free, nonexclusive permission to obtain, use, study, copy, modify and
+redistribute the original project code, configuration templates and
+documentation (the "Materials") for noncommercial purposes only.
+No fee or registration is required to exercise these permissions.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+This grant covers only rights controlled by the copyright holder. Third-party
+code, software, documentation and other third-party materials remain subject
+to their own licenses and notices. This license does not relicense them.
+
+2. Free access and redistribution
+
+Copies and modified versions of the Materials may be shared only free of
+charge. Preserve this license, copyright notices and the project URL above in
+all copies or substantial portions. Clearly identify modified versions and
+the changes made. Do not represent modifications as an official release.
+
+3. Prohibited commercial activities
+
+No permission is granted under this license to:
+(a) sell, rent, sublicense for a fee, or charge for access to the Materials
+    or modified versions;
+(b) use the Materials or modified versions to operate, supply or support
+    a paid VPN, subscription service or other monetized service;
+(c) charge for installation, deployment, configuration, integration,
+    migration, hosting, administration, maintenance, support, consulting
+    or training relating to the Materials or modified versions;
+(d) bundle the Materials or modified versions with a paid product or
+    service, or use them for another purpose primarily directed toward
+    commercial advantage or monetary compensation.
+
+These restrictions apply whether payment is direct or indirect and whether
+the Materials are modified or unmodified. They do not prohibit a user from
+paying an independent infrastructure provider for their own server or Internet
+connection for otherwise permitted noncommercial use. No rights over such
+independent third-party infrastructure or software are claimed.
+
+4. Earlier licenses
+
+This license does not revoke, replace or restrict permissions already granted
+under MIT or another license for earlier copies or versions. Material
+previously released under MIT remains usable under that grant. A recipient may
+rely on that earlier grant for the material it covers. This license governs
+new grants made under these terms only; it does not retroactively impose
+noncommercial restrictions on previously licensed material.
+
+5. Reservation and termination
+
+All rights not expressly granted are reserved. Permissions under this license
+terminate automatically if its conditions are violated. Termination does not
+affect independent rights granted under an earlier or third-party license.
+
+6. Disclaimer
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. TO THE EXTENT PERMITTED
+BY APPLICABLE LAW, IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE MATERIALS OR THEIR USE.
+
+This is a custom source-available noncommercial license, not the MIT License
+and not an OSI-approved open source license.
